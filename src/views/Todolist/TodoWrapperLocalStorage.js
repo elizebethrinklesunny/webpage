@@ -10,11 +10,13 @@ export const TodoWrapperLocalStorage = () => {
 
     useEffect(() => {
         const savedTodos = JSON.parse(localStorage.getItem('todos')) || [];
+        console.log("savedTodos",savedTodos);
         setTodos(savedTodos);
     }, []);
 
     const addTodo = todo => {
         const newTodos = [...todos, {id: uuidv4(), task: todo, completed: false, isEditing: false}];
+        console.log("newTodos",newTodos);
         setTodos(newTodos);
         localStorage.setItem('todos', JSON.stringify(newTodos));
     }
@@ -42,7 +44,7 @@ export const TodoWrapperLocalStorage = () => {
     }
   return (
     <div className='TodoWrapper'>
-        <h1>Get Things Done!</h1>
+        <h1>Get Things Done!localStorage</h1>
         <TodoForm addTodo={addTodo} />
         {todos.map((todo, index) => (
             todo.isEditing ? (

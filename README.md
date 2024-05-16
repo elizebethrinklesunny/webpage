@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+Simple Dashboard Application
+This project is a simple dashboard layout built using React. The dashboard includes a header, a sidebar, and a main content area with two widgets: a Weather Widget and a Todo List Widget. The sidebar allows users to toggle the visibility of these widgets in the main content area.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+Header: Static header for the dashboard.
+Sidebar: Contains buttons to toggle the visibility of different widgets in the main content area.
+Weather Widget:
+Fetches weather data from a public API ( OpenWeatherMap API).
+Displays the current weather status (temperature, humidity, weather conditions) for a user-specified location. using Redux Api  calling
+Includes a form to change the location.
+Todo List Widget:
+Allows users to add, delete, and mark todos as complete.
+Manages the todo list using local state.
+Save todos in local storage or a mock server.
+Styling: Uses CSS or styled-components for a clean and functional design.
+Responsive Design: mobile devices and web .
+Installation
+Clone the repository:
 
-## Available Scripts
+Copy code
+git clone https://github.com/elizebethrinklesunny/webpage.git
+cd dashboard-app
+Install dependencies:
 
-In the project directory, you can run:
+Copy code
+npm install
+Run the application:
 
-### `npm start`
+Copy code
+npm start
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Usage
+Weather Widget:
+Enter a location in the form and press enter to fetch and display the current weather for that location.
+Todo List Widget:
+Add a new todo item by typing into the input field and pressing enter or clicking the add button.
+Mark todos as complete by clicking on mark button.
+Delete todos by clicking the delete button next to each item.
+Project Structure
+css
+Copy code
+.
+├── public
+│   ├── index.html
+│   └── ...
+├── src
+│   ├── Views
+│   │   ├── Assets
+|   |   |      |──Images
+│   │   ├── components
+|   |   |      |──Header.js
+|   |   |      |──drawer.css
+│   │   ├──config
+│   │   └── Todolist
+|   |   |      |──EditTodoForm.js
+|   |   |      |──Todo.js
+|   |   |      |──TodoForm.js
+|   |   |      |──Todolist.css
+|   |   |      |──TodoWrapper.js
+|   |   |      |──TodoWrapperLocalstorage.js
+│   │   └── Weather
+|   |   |      |Weather.css
+|   |   |      |WeatherWidget.js
+│   ├── Dashboard
+│   │   
+│   ├── App.js
+│   ├── index.js
+│   └── styles.css
+└── package.json
+Components
+Header.js: The header component for the dashboard.
+Sidebar.js: The sidebar component with buttons to toggle widget visibility.
+WeatherWidget.js: The component to fetch and display weather data.
+TodoListWidget.js: The component to manage and display the todo list.
+State Management
 
-### `npm test`
+Styling
+styles.css: Contains the basic styles for the application.
+API Integration
+OpenWeatherMap API: Used to fetch weather data for the Weather Widget. Ensure to replace the placeholder API key with your actual API key.
+Responsive Design
+The application layout is responsive, ensuring a good user experience on both desktop and mobile devices.
+Enhancements
+Save the todo list in local storage or a mock server for persistent storage.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Contributing
+Fork the repository.
+Create a new branch.
+Make your changes.
+Submit a pull request.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contact
+For any questions or feedback, please contact [charusunny124@gmail.com].

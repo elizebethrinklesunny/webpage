@@ -8,22 +8,7 @@ function WeatherWidget() {
   const weatherCondition =useSelector((state)=>state.Admin.listweather)
   console.log("weatherCondition",weatherCondition);
 const dispatch=useDispatch()
-  // const api = {
-  //   key: "5b9798395b65bd6fdf40d827d9b081e4",
-  //   base: "https://api.openweathermap.org/data/2.5/",
-  // };
-
-  // const searchWeather = () => {
-  //   fetch(`${api.base}weather?q=${city}&units=metric&APPID=${api.key}`)
-  //     .then((res) => res.json())
-  //     .then((result) => {
-  //       console.log(result);
-  //       setWeatherCondition(result);
-  //     })
-  //     .catch((error) => {
-  //       console.error("error:", error);
-  //     });
-  // };
+ 
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
@@ -31,7 +16,7 @@ const dispatch=useDispatch()
     }
   };
 
-  // Function to get suitable weather icon URL based on weather condition code
+  
   const getWeatherIcon = (code) => {
     return `https://openweathermap.org/img/wn/${code}@2x.png`;
   };
